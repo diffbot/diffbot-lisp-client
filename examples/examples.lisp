@@ -9,7 +9,7 @@
 (defun article-api-example ()
   "Performs a sample article API request.
    Extrats text from http://diffbot.com/"
-  (let ((token "89e24f53a99c5b5126332e2b8b3a2759"))
+  (let ((token "DIFFBOT_TOKEN"))
     (handler-case 
 	(let ((data (article-api token "http://diffbot.com/")))
 	  (format nil "http://diffbot.com/ text: ~a" (cdr (assoc :text data))))
